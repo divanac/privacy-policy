@@ -1,77 +1,433 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.1">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #101114; -webkit-text-stroke: #101114}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #15171c; -webkit-text-stroke: #15171c}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #15171c; -webkit-text-stroke: #15171c; min-height: 18.0px}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #15171c; -webkit-text-stroke: #15171c; background-color: #ffffff}
-    li.li4 {margin: 0.0px 0.0px 10.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #15171c; -webkit-text-stroke: #15171c}
-    span.s1 {font-kerning: none; background-color: #ffffff}
-    span.s2 {font-kerning: none}
-    span.s3 {background-color: #ffffff; -webkit-text-stroke: 0px #000000}
-    ul.ul1 {list-style-type: disc}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tables Tapper — Privacy Policy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --surface: #ffffff;
+      --text: #0a0a0a;
+      --muted: #737373;
+      --soft: #a3a3a3;
+      --border: #e7e5e3;
+      --border-strong: #d4d4d2;
+      --accent: #ff5a1f;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0a0a0a;
+        --surface: #111111;
+        --text: #f5f5f4;
+        --muted: #8a8a87;
+        --soft: #525252;
+        --border: #1f1f1e;
+        --border-strong: #2a2a28;
+        --accent: #ff7a4a;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Geist', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      font-feature-settings: "ss01", "cv11", "kern", "tnum";
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      letter-spacing: -0.005em;
+    }
+
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 80px 24px 96px;
+    }
+
+    .mono {
+      font-family: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12px;
+      letter-spacing: 0.02em;
+      font-feature-settings: "tnum";
+    }
+
+    /* HEADER */
+    header {
+      margin-bottom: 56px;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px 6px 8px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      background: var(--surface);
+      margin-bottom: 32px;
+    }
+
+    .kicker .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    h1 {
+      font-size: clamp(44px, 7vw, 64px);
+      font-weight: 500;
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      margin: 0;
+    }
+
+    .subhead {
+      margin: 14px 0 0;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.3;
+      letter-spacing: -0.015em;
+      color: var(--muted);
+    }
+
+    .meta {
+      margin-top: 20px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .meta .sep {
+      color: var(--soft);
+    }
+
+    /* LEAD */
+    .lead {
+      font-size: 19px;
+      line-height: 1.55;
+      color: var(--text);
+      margin: 0 0 40px;
+      max-width: 600px;
+      letter-spacing: -0.01em;
+    }
+
+    /* BRIEF CARD */
+    .brief {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 26px 24px;
+      margin: 0 0 72px;
+    }
+
+    .brief-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .brief-title {
+      color: var(--text);
+      font-weight: 500;
+      font-family: 'Geist Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .brief-tag {
+      color: var(--muted);
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.04em;
+    }
+
+    .brief ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brief li {
+      padding: 6px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      line-height: 1.5;
+      border-top: 1px dashed var(--border);
+    }
+
+    .brief li:first-child { border-top: 0; padding-top: 8px; }
+
+    .brief li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 999px;
+      background: var(--accent);
+      margin-top: 9px;
+      flex-shrink: 0;
+    }
+
+    /* SECTIONS */
+    article {
+      counter-reset: section;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    section { counter-increment: section; }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1.25;
+      letter-spacing: -0.022em;
+      margin: 0 0 14px;
+      color: var(--text);
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+    }
+
+    h2::before {
+      content: counter(section, decimal-leading-zero);
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      padding: 3px 7px;
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      flex-shrink: 0;
+      transform: translateY(-2px);
+      background: var(--surface);
+    }
+
+    p {
+      margin: 0 0 12px;
+      color: var(--text);
+      max-width: 600px;
+    }
+
+    section p:last-child { margin-bottom: 0; }
+
+    .body-list {
+      list-style: none;
+      margin: 8px 0 12px;
+      padding: 0;
+      max-width: 600px;
+    }
+
+    .body-list li {
+      padding: 5px 0 5px 22px;
+      position: relative;
+      color: var(--text);
+    }
+
+    .body-list li::before {
+      content: '';
+      position: absolute;
+      left: 2px;
+      top: 14px;
+      width: 10px;
+      height: 1px;
+      background: var(--soft);
+    }
+
+    a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 1px;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    strong {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 80px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: var(--muted);
+    }
+
+    .wordmark {
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .wordmark::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 2px;
+      background: var(--accent);
+    }
+
+    /* MOTION */
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .page > * {
+      animation: rise 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+
+    .page > header  { animation-delay: 0.00s; }
+    .page > .lead   { animation-delay: 0.06s; }
+    .page > .brief  { animation-delay: 0.12s; }
+    .page > article { animation-delay: 0.18s; }
+    .page > footer  { animation-delay: 0.30s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .page > * { animation: none !important; }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 560px) {
+      .page { padding: 56px 20px 72px; }
+      header { margin-bottom: 40px; }
+      .kicker { margin-bottom: 24px; }
+      h1 { font-size: 36px; letter-spacing: -0.03em; }
+      .lead { font-size: 17px; margin-bottom: 32px; }
+      .brief { padding: 20px 22px; margin-bottom: 56px; }
+      article { gap: 40px; }
+      h2 { font-size: 19px; }
+      footer { margin-top: 64px; padding-top: 24px; }
+    }
   </style>
 </head>
 <body>
-<p class="p1"><span class="s1"><b>Privacy Policy</b><b></b></span></p>
-<p class="p2"><span class="s1">This privacy policy applies to the Tables Tapper app (hereby referred to as "Application") for mobile devices that was created by OcuNecu (hereby referred to as "Service Provider") as a Free service. This service is intended for use "AS IS".</span></p>
-<p class="p3"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1"><b>Information Collection and Use</b><b></b></span></p>
-<p class="p2"><span class="s1">The Application collects information when you download and use it. This information may include information such as</span></p>
-<ul class="ul1">
-  <li class="li4"><span class="s3"></span><span class="s1">Your device's Internet Protocol address (e.g. IP address)</span></li>
-  <li class="li4"><span class="s3"></span><span class="s1">The pages of the Application that you visit, the time and date of your visit, the time spent on those pages</span></li>
-  <li class="li4"><span class="s3"></span><span class="s1">The time spent on the Application</span></li>
-  <li class="li4"><span class="s3"></span><span class="s1">The operating system you use on your mobile device</span></li>
-</ul>
-<p class="p3"><span class="s2"></span><br></p>
-<p class="p3"><span class="s2"></span><br></p>
-<p class="p2"><span class="s1">The Application does not gather precise information about the location of your mobile device.</span></p>
-<p class="p3"><span class="s2"></span><br></p>
-<p class="p2"><span class="s1">The Service Provider may use the information you provided to contact you from time to time to provide you with important information, required notices and marketing promotions.</span></p>
-<p class="p3"><span class="s2"></span><br></p>
-<p class="p2"><span class="s1">For a better experience, while using the Application, the Service Provider may require you to provide us with certain personally identifiable information. The information that the Service Provider request will be retained by them and used as described in this privacy policy.</span></p>
-<p class="p3"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1"><b>Third Party Access</b><b></b></span></p>
-<p class="p2"><span class="s1">Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.</span></p>
-<p class="p3"><span class="s2"></span><br></p>
-<p class="p2"><span class="s1">The Service Provider may disclose User Provided and Automatically Collected Information:</span></p>
-<ul class="ul1">
-  <li class="li4"><span class="s3"></span><span class="s1">as required by law, such as to comply with a subpoena, or similar legal process;</span></li>
-  <li class="li4"><span class="s3"></span><span class="s1">when they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;</span></li>
-  <li class="li4"><span class="s3"></span><span class="s1">with their trusted services providers who work on their behalf, do not have an independent use of the information we disclose to them, and have agreed to adhere to the rules set forth in this privacy statement.</span></li>
-</ul>
-<p class="p3"><span class="s2"></span><br></p>
-<p class="p3"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1"><b>Opt-Out Rights</b><b></b></span></p>
-<p class="p2"><span class="s1">You can stop all collection of information by the Application easily by uninstalling it. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network.</span></p>
-<p class="p3"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1"><b>Data Retention Policy</b><b></b></span></p>
-<p class="p2"><span class="s1">The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. If you'd like them to delete User Provided Data that you have provided via the Application, please contact them at damjan.ivanac@gmail.com and they will respond in a reasonable time.</span></p>
-<p class="p3"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1"><b>Children</b><b></b></span></p>
-<p class="p2"><span class="s1">The Service Provider does not use the Application to knowingly solicit data from or market to children under the age of 13.</span></p>
-<p class="p3"><span class="s2"></span><br></p>
-<p class="p2"><span class="s1">The Service Provider does not knowingly collect personally identifiable information from children. The Service Provider encourages all children to never submit any personally identifiable information through the Application and/or Services. The Service Provider encourage parents and legal guardians to monitor their children's Internet usage and to help enforce this Policy by instructing their children never to provide personally identifiable information through the Application and/or Services without their permission. If you have reason to believe that a child has provided personally identifiable information to the Service Provider through the Application and/or Services, please contact the Service Provider (damjan.ivanac@gmail.com) so that they will be able to take the necessary actions. You must also be at least 16 years of age to consent to the processing of your personally identifiable information in your country (in some countries we may allow your parent or guardian to do so on your behalf).</span></p>
-<p class="p3"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1"><b>Security</b><b></b></span></p>
-<p class="p2"><span class="s1">The Service Provider is concerned about safeguarding the confidentiality of your information. The Service Provider provides physical, electronic, and procedural safeguards to protect information the Service Provider processes and maintains.</span></p>
-<p class="p3"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1"><b>Changes</b><b></b></span></p>
-<p class="p2"><span class="s1">This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to the Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.</span></p>
-<p class="p3"><span class="s2"></span><br></p>
-<p class="p2"><span class="s1">This privacy policy is effective as of 2025-10-07</span></p>
-<p class="p3"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1"><b>Your Consent</b><b></b></span></p>
-<p class="p2"><span class="s1">By using the Application, you are consenting to the processing of your information as set forth in this Privacy Policy now and as amended by us.</span></p>
-<p class="p3"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1"><b>Contact Us</b><b></b></span></p>
-<p class="p5"><span class="s2">If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at damjan.ivanac@gmail.com.</span></p>
+  <main class="page">
+    <header>
+      <div class="kicker mono">
+        <span class="dot"></span>
+        <span>OcuNecu</span>
+      </div>
+      <h1>Tables Tapper</h1>
+      <p class="subhead">Privacy Policy</p>
+      <div class="meta mono">
+        <span>Effective</span>
+        <span class="sep">·</span>
+        <span>2025-10-07</span>
+      </div>
+    </header>
+
+    <p class="lead">Tables Tapper is built by OcuNecu and offered as a free app. This policy explains what limited information the app collects, why it is collected, and the choices you have.</p>
+
+    <aside class="brief">
+      <div class="brief-head">
+        <div class="brief-title">Summary</div>
+        <div class="brief-tag">tl;dr</div>
+      </div>
+      <ul>
+        <li>Minimal data, mostly anonymous &mdash; used to keep the app running.</li>
+        <li>No precise location. No selling of your data.</li>
+        <li>Uninstall the app to stop all collection at any time.</li>
+        <li>Questions or requests &mdash; <a href="mailto:damjan.ivanac@gmail.com">damjan.ivanac@gmail.com</a></li>
+      </ul>
+    </aside>
+
+    <article>
+      <section>
+        <h2>Information we collect</h2>
+        <p>When you use Tables Tapper, the app may automatically collect a small amount of technical and usage information:</p>
+        <ul class="body-list">
+          <li>Device IP address</li>
+          <li>Operating system and device type</li>
+          <li>Screens viewed within the app, and the time and duration of each visit</li>
+          <li>Crash and diagnostic data to help us fix problems</li>
+        </ul>
+        <p>The app does <strong>not</strong> collect your precise location, contacts, photos, or microphone input.</p>
+      </section>
+
+      <section>
+        <h2>How we use it</h2>
+        <p>We use this information to operate the app, monitor stability and performance, fix bugs, and improve features over time. We may occasionally send required service notices &mdash; for example, a material change to this policy.</p>
+      </section>
+
+      <section>
+        <h2>Third parties</h2>
+        <p>We may share aggregated, anonymised data with trusted service providers who help us run analytics and crash reporting on our behalf. These providers are bound to use the data only for those purposes.</p>
+        <p>We may also disclose information when legally required to do so &mdash; for example, to comply with a subpoena or legal process &mdash; or when we believe in good faith it is necessary to protect rights, safety, or to investigate fraud.</p>
+      </section>
+
+      <section>
+        <h2>Your choices</h2>
+        <p>You can stop all collection of information by Tables Tapper by uninstalling the app using the standard process for your device. Depending on where you live, you may also have the right to access, correct, or delete personal information we hold about you. To make a request, write to <a href="mailto:damjan.ivanac@gmail.com">damjan.ivanac@gmail.com</a> and we will respond within a reasonable time.</p>
+      </section>
+
+      <section>
+        <h2>Data retention</h2>
+        <p>We retain information for as long as it is needed to provide the app and for a reasonable period afterward. You can request earlier deletion of any data you have provided by contacting us.</p>
+      </section>
+
+      <section>
+        <h2>Children</h2>
+        <p>Tables Tapper is not directed to children under 13 and we do not knowingly collect personal information from them. If you are a parent or guardian and believe your child has provided us with personal information, please contact us so we can remove it. In some regions, you must be at least 16 to consent to the processing of your personal information; a parent or guardian may consent on your behalf where local law allows.</p>
+      </section>
+
+      <section>
+        <h2>Security</h2>
+        <p>We use reasonable physical, electronic, and procedural safeguards to protect the information we process. No method of transmission or storage is perfectly secure, but we work to keep your data safe.</p>
+      </section>
+
+      <section>
+        <h2>Changes to this policy</h2>
+        <p>We may update this Privacy Policy from time to time. When we do, we will revise the effective date at the top of this page. Your continued use of the app after a change indicates that you accept the updated policy.</p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>If you have any questions about this policy or your data, write to us at <a href="mailto:damjan.ivanac@gmail.com">damjan.ivanac@gmail.com</a>.</p>
+      </section>
+    </article>
+
+    <footer>
+      <div class="wordmark">Tables Tapper</div>
+      <div class="mono">© 2025 OcuNecu</div>
+    </footer>
+  </main>
 </body>
 </html>
