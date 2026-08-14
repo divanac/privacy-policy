@@ -354,7 +354,7 @@
       </div>
     </header>
 
-    <p class="lead">Near Now is built by OcuNecu. It collects no data at all &mdash; no analytics, no tracking, no third-party services. This policy explains what that means in practice.</p>
+    <p class="lead">Near Now is built by OcuNecu. It needs your location to tell you when you are near a place you saved &mdash; and that location is used on your device and never sent to us. This policy explains exactly how it is handled.</p>
 
     <aside class="brief">
       <div class="brief-head">
@@ -363,9 +363,10 @@
       </div>
             <ul>
         <li>We collect nothing. No analytics, no tracking, no crash reporting.</li>
-        <li>No third-party SDKs or services of any kind.</li>
-        <li>No accounts, no sign-in, no servers of ours to send anything to.</li>
-        <li>Whatever you create in the app stays on your device.</li>
+        <li>Your location stays on your device. We never receive it.</li>
+        <li>No advertising or analytics SDKs, no accounts, no servers of ours.</li>
+        <li>Maps, search, and addresses come from Apple Maps.</li>
+        <li>Your saved places stay on your device.</li>
         <li>Questions &mdash; <a href="mailto:au.ocunecu@gmail.com">au.ocunecu@gmail.com</a></li>
       </ul>
     </aside>
@@ -379,16 +380,25 @@
           <li>Your operating system, device type, or any device identifier</li>
           <li>Which screens you open, what you tap, or how long you use the app</li>
           <li>Crash logs or diagnostic data</li>
-          <li>Your location, contacts, photos, calendar, or microphone input</li>
+          <li>Your location or any history of where you have been</li>
+          <li>Your contacts, photos, calendar, or microphone input</li>
           <li>Your name, email address, or any other personal detail</li>
         </ul>
         <p>There is no analytics SDK, no tracking, no advertising, and no crash reporting in Near Now. There are no accounts, no sign-in, and no servers of ours that receive your information, so there is nothing for us to store, sell, share, or lose.</p>
       </section>
 
       <section>
-        <h2>No third parties</h2>
-        <p>Near Now does not use third-party services, SDKs, or analytics providers of any kind. Nobody else receives data from the app, because the app does not send data anywhere.</p>
-        <p>Apple may provide us with its own anonymised, aggregate App Store statistics &mdash; download counts and the like &mdash; if you have opted in to sharing them with developers in your device settings. That is data Apple collects under <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>, not something Near Now collects, and it never identifies you.</p>
+        <h2>Location</h2>
+        <p>Near Now asks for location access because that is the entire point of the app: it watches for when you arrive near a place you have saved, and alerts you. To do that while the app is closed, iOS may ask for &ldquo;Always&rdquo; access.</p>
+        <p>All of it happens on your device. The arrival alerts are handled by the iOS geofencing system, which monitors the regions you saved and wakes the app when you cross one. Your coordinates, your saved places, and your movement between them are never transmitted to us &mdash; we have no server to transmit them to, and no way to see them. Nothing about your location leaves your device except the map requests described below.</p>
+        <p>You can change or revoke location access at any time in Settings, and delete any saved place inside the app.</p>
+      </section>
+
+      <section>
+        <h2>Maps and addresses</h2>
+        <p>Near Now uses Apple's own map services to draw the map, let you search for a place, and turn coordinates into a readable street address. Those requests go to Apple Maps and are handled under <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>; Apple designs Maps so that such requests are not associated with your Apple Account. We are not party to them and receive nothing from them.</p>
+        <p>Apart from Apple's own map and system services, Near Now uses no third-party services or SDKs at all. It does not read your contacts &mdash; it uses only Apple's address-formatting utility, which works entirely on-device.</p>
+        <p>Apple may also provide us with anonymised, aggregate App Store statistics &mdash; download counts and the like &mdash; if you have opted in to sharing them with developers in your device settings. That is data Apple collects, not something Near Now collects, and it never identifies you.</p>
       </section>
 
       <section>
@@ -399,7 +409,7 @@
 
       <section>
         <h2>Permissions</h2>
-        <p>If Near Now needs a system permission to do its job &mdash; notifications, for example &mdash; iOS asks you first, and you can withdraw it at any time in Settings. Anything accessed under such a permission is used on your device, for that feature, and is never transmitted to us.</p>
+        <p>Near Now asks for two system permissions: location, described above, and notifications, so it can alert you when you arrive somewhere. iOS asks you before granting either, and you can withdraw both at any time in Settings. Notifications are composed and delivered on your device &mdash; there is no push server, so we never send you anything and never see what an alert said.</p>
       </section>
 
       <section>

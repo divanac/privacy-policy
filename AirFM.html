@@ -354,7 +354,7 @@
       </div>
     </header>
 
-    <p class="lead">Air FM is built by OcuNecu. It collects no data at all &mdash; no analytics, no tracking, no third-party services. This policy explains what that means in practice.</p>
+    <p class="lead">Air FM is built by OcuNecu. It collects nothing about you and has no analytics or tracking of any kind. It does have to reach the internet to find and play radio, and this policy explains exactly who is on the other end of that connection.</p>
 
     <aside class="brief">
       <div class="brief-head">
@@ -363,9 +363,10 @@
       </div>
             <ul>
         <li>We collect nothing. No analytics, no tracking, no crash reporting.</li>
-        <li>No third-party SDKs or services of any kind.</li>
-        <li>No accounts, no sign-in, no servers of ours to send anything to.</li>
-        <li>Whatever you create in the app stays on your device.</li>
+        <li>No advertising or analytics SDKs, and no accounts or sign-in.</li>
+        <li>We run no servers &mdash; audio streams straight from the broadcaster to you.</li>
+        <li>Station searches go to an open community directory, not to us.</li>
+        <li>Favourites and recents stay on your device.</li>
         <li>Questions &mdash; <a href="mailto:au.ocunecu@gmail.com">au.ocunecu@gmail.com</a></li>
       </ul>
     </aside>
@@ -386,9 +387,14 @@
       </section>
 
       <section>
-        <h2>No third parties</h2>
-        <p>Air FM does not use third-party services, SDKs, or analytics providers of any kind. Nobody else receives data from the app, because the app does not send data anywhere.</p>
-        <p>Apple may provide us with its own anonymised, aggregate App Store statistics &mdash; download counts and the like &mdash; if you have opted in to sharing them with developers in your device settings. That is data Apple collects under <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>, not something Air FM collects, and it never identifies you.</p>
+        <h2>Streaming and the station directory</h2>
+        <p>Air FM cannot play radio without reaching the internet, and two kinds of servers see that connection. Neither is ours, and neither reports anything back to us.</p>
+        <ul class="body-list">
+          <li><strong>The station directory.</strong> Station listings come from <a href="https://www.radio-browser.info">Radio Browser</a>, a free community-run open directory. When you search or browse, your search terms and your device's IP address reach whichever community mirror answers, along with a user-agent string that identifies the app but not you. When you start playing a station, the app also pings the directory so that station's public play count goes up by one; that ping carries the station's ID, nothing about you.</li>
+          <li><strong>The station itself.</strong> Audio is streamed directly from the broadcaster to your device. That broadcaster and its CDN see your IP address and that someone is listening &mdash; exactly as they would if you opened the same stream in a browser.</li>
+        </ul>
+        <p>How those parties handle a connection is governed by their own policies, not this one. Air FM has no other third-party services, and no advertising or analytics SDK of any kind.</p>
+        <p>Separately, Apple may provide us with its own anonymised, aggregate App Store statistics &mdash; download counts and the like &mdash; if you have opted in to sharing them with developers in your device settings. That is data Apple collects under <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>, not something Air FM collects, and it never identifies you.</p>
       </section>
 
       <section>
